@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Institution logo placeholder">
+  <rect width="64" height="64" rx="10" fill="#eceae4"/>
+  <path d="M12 50V26l20-12 20 12v24" fill="none" stroke="#a8a49a" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M26 50V36h12v14" fill="none" stroke="#a8a49a" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M8 50h48" stroke="#a8a49a" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" width="520" height="360" role="img" aria-label="Paper thumbnail placeholder">
+  <rect width="520" height="360" fill="#f4f8fb"/>
+  <rect x="0.5" y="0.5" width="519" height="359" fill="none" stroke="#dbe6ee"/>
+  <rect x="60" y="66" width="180" height="120" rx="6" fill="#dfeaf3"/>
+  <rect x="60" y="204" width="400" height="12" rx="6" fill="#dfeaf3"/>
+  <rect x="60" y="230" width="340" height="12" rx="6" fill="#e7f0f5"/>
+  <rect x="60" y="256" width="380" height="12" rx="6" fill="#e7f0f5"/>
+  <rect x="268" y="66" width="192" height="120" rx="6" fill="#e7f0f5"/>
+  <text x="260" y="316" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="16" letter-spacing="2" fill="#9aabbd">PAPER FIGURE</text>
+</svg>

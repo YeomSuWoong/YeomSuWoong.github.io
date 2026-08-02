@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ═══ 본인 정보로 교체 ═══ -->
+  <title>Suwoong Yeom · Academic Portfolio</title>
+  <meta name="description" content="Suwoong Yeom · Integrated M.S./Ph.D. student in Electronic Engineering at Sogang University (VDSLab). 3D/4D reconstruction with NeRF and Gaussian Splatting, spatial AI, and world models for digital twins." />
+  <!-- ═══════════════════════ -->
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- 새로고침 시 테마 깜빡임 방지 -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ══════════════════════════ NAV ══════════════════════════ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#top">
+      <span class="nav-brand-mark">SY</span>
+      <span class="nav-brand-name">Suwoong Yeom</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#publications">Publications</a>
+      <a href="#mentoring">Mentoring</a>
+      <a href="#projects">Projects</a>
+    </nav>
+
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/></svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.2 8.2 0 1 0 10.2 10.2Z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ══════════════════════════ HERO ══════════════════════════ -->
+  <section class="hero" id="top">
+    <div class="shell hero-grid">
+
+      <div class="hero-main">
+        <p class="eyebrow">Integrated M.S./Ph.D. Student · VDSLab, Sogang University</p>
+
+        <h1 class="hero-name">Suwoong&nbsp;Yeom</h1>
+
+        <div class="hero-lede">
+          <p>
+            I received my B.S. in Mechanical Engineering from Ajou University, and I am now an
+            integrated M.S./Ph.D. student in Electronic Engineering at Sogang University,
+            advised by Prof. Suk-Ju Kang.
+          </p>
+          <p>
+            My research has centered on reconstructing 3D/4D space with NeRF and Gaussian
+            Splatting. I currently work on spatial AI, studying how feed-forward models come
+            to understand spatial structure, and on world models for digital twins that supply
+            training data and simulation for physical AI.
+          </p>
+        </div>
+
+        <ul class="chips" aria-label="Research interests">
+          <li>3D/4D Reconstruction</li>
+          <li>3D/4D Computer Vision</li>
+          <li>Spatial AI</li>
+          <li>World Model</li>
+        </ul>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:duatndnd123@gmail.com">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.25 6.75A2.25 2.25 0 0 1 4.5 4.5h15a2.25 2.25 0 0 1 2.25 2.25v.3l-9.75 5.69L2.25 7.05v-.3Z"/><path d="M2.25 9.31v7.94A2.25 2.25 0 0 0 4.5 19.5h15a2.25 2.25 0 0 0 2.25-2.25V9.31l-9.24 5.4a1.5 1.5 0 0 1-1.52 0L2.25 9.31Z"/></svg>
+            Email
+          </a>
+
+          <a class="btn" href="https://scholar.google.com/citations?hl=en&amp;user=7wG0GVcAAAAJ" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.242 13.769 0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5s-5.548 1.749-6.758 4.269ZM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14Z"/></svg>
+            Google Scholar
+          </a>
+
+          <a class="btn" href="https://github.com/YeomSuWoong" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.5 11.5 0 0 1 3-.405c1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12Z"/></svg>
+            GitHub
+          </a>
+
+          <a class="btn" href="https://www.linkedin.com/in/suwoong-yeom-825599251/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286ZM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125Zm1.782 13.019H3.555V9h3.564v11.452ZM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003Z"/></svg>
+            LinkedIn
+          </a>
+
+          <!-- CV PDF를 assets/ 에 넣고 아래 href를 바꾸세요 (예: assets/cv.pdf) -->
+          <a class="btn" href="#">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a1 1 0 0 1 1 1v8.59l3.3-3.3a1 1 0 1 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.42l3.3 3.3V4a1 1 0 0 1 1-1Z"/><path d="M4 18a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1Z"/></svg>
+            CV (PDF)
+          </a>
+        </div>
+      </div>
+
+      <aside class="hero-aside">
+        <figure class="portrait">
+          <img src="assets/profile.jpg" alt="Portrait of Suwoong Yeom" width="720" height="900" />
+        </figure>
+        <p class="portrait-meta">
+          <span class="dot" aria-hidden="true"></span>
+          Seoul, South Korea
+        </p>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════ EDUCATION ══════════════════════ -->
+  <!-- 학위만. visiting / 인턴은 아래 Experience 로 -->
+  <section class="band" id="education">
+    <div class="shell">
+      <div class="section-head">
+        <h2 class="section-title">Education</h2>
+        <p class="section-note">Degrees only. Visiting positions live under Experience</p>
+      </div>
+
+      <div class="timeline timeline-logos">
+        <article class="tl-item">
+          <p class="tl-date">2023.03 —</p>
+          <span class="tl-logo"><img src="assets/logos/sogang.png" alt="Sogang University" loading="lazy" /></span>
+          <div class="tl-body">
+            <h3 class="tl-title">Integrated M.S./Ph.D. in Electronic Engineering</h3>
+            <p class="tl-org">Sogang University · VDSLab</p>
+            <p class="tl-advisor"><span class="label">Advisor</span><span class="name">Prof. Suk-Ju Kang</span></p>
+          </div>
+        </article>
+
+        <article class="tl-item">
+          <p class="tl-date">2016.03 — 2022.08</p>
+          <span class="tl-logo"><img src="assets/logos/ajou.png" alt="Ajou University" loading="lazy" /></span>
+          <div class="tl-body">
+            <!-- 학과명 확인해서 채워 넣으세요 -->
+            <h3 class="tl-title">B.S. in Mechanical Engineering</h3>
+            <p class="tl-org">Ajou University</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ EXPERIENCE ══════════════════════ -->
+  <!-- 학위가 아닌 소속 — visiting, 인턴, RA 등은 전부 여기로 -->
+  <section class="band band-alt" id="experience">
+    <div class="shell">
+      <div class="section-head">
+        <h2 class="section-title">Experience</h2>
+        <p class="section-note">Visiting positions and internships</p>
+      </div>
+
+      <div class="timeline timeline-logos">
+        <article class="tl-item">
+          <p class="tl-date">2026.06 — 2026.07</p>
+          <span class="tl-logo logo-purdue"><img src="assets/logos/purdue.webp" alt="Purdue University" loading="lazy" /></span>
+          <div class="tl-body">
+            <h3 class="tl-title">Visiting Researcher</h3>
+            <p class="tl-org">Purdue University · NEISLab</p>
+            <p class="tl-advisor"><span class="label">Host</span><span class="name">Prof. Younghyun Kim</span></p>
+          </div>
+        </article>
+
+        <!-- 인턴 확정되면 아래를 채우고 is-template / template-badge 를 지우세요 -->
+        <!-- <article class="tl-item is-template">
+          <p class="tl-date">20XX.XX — 20XX.XX</p>
+          <span class="tl-logo"><img src="assets/logos/placeholder.svg" alt="" loading="lazy" /></span>
+          <div class="tl-body">
+            <p class="template-badge">템플릿 · 지우거나 채워 넣으세요</p>
+            <h3 class="tl-title">Research Intern</h3>
+            <p class="tl-org">Company or Lab · Location</p>
+          </div>
+        </article> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ SELECTED WORK ══════════════════════ -->
+  <section class="band" id="work">
+    <div class="shell">
+      <div class="section-head">
+        <h2 class="section-title">Selected Work</h2>
+        <p class="section-note">Projects I led or co-led</p>
+      </div>
+
+      <div class="work-grid">
+
+        <article class="work-card">
+          <a class="work-thumb" href="https://arxiv.org/abs/2604.00538">
+            <video src="assets/papers/trigs-demo.mp4" autoplay muted loop playsinline
+                   preload="metadata" aria-label="TRiGS 4D reconstruction demo"></video>
+          </a>
+          <div class="work-body">
+            <p class="work-venue"><span class="venue-chip">ECCV 2026</span></p>
+            <h3 class="work-title">TRiGS: Temporal Rigid-Body Motion for Scalable 4D Gaussian Splatting</h3>
+            <p class="work-desc">Rigid-body motion priors that keep 4D Gaussian splatting tractable as scenes grow.</p>
+            <div class="work-links">
+              <a href="https://arxiv.org/abs/2604.00538">arXiv</a>
+              <a href="https://wwwjjn.github.io/TRiGS-project_page/">Project</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <a class="work-thumb" href="https://arxiv.org/pdf/2604.04016">
+            <video src="assets/papers/hoigs-demo.mp4" autoplay muted loop playsinline
+                   preload="metadata" aria-label="HOIGS reconstruction comparison demo"></video>
+          </a>
+          <div class="work-body">
+            <p class="work-venue"><span class="venue-chip">IEEE TMM · Submitted</span></p>
+            <h3 class="work-title">HOIGS: Human-Object Interaction Gaussian Splatting</h3>
+            <p class="work-desc">Joint reconstruction of humans and the objects they interact with, in one splatting model.</p>
+            <div class="work-links">
+              <a href="https://arxiv.org/pdf/2604.04016">arXiv</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 링크가 생기면 아래 span 을 <a class="work-thumb" href="…"> 로 바꾸고
+             work-links 블록을 추가하세요 -->
+        <article class="work-card">
+          <span class="work-thumb">
+            <video src="assets/papers/emdgs-demo.mp4" autoplay muted loop playsinline
+                   preload="metadata" aria-label="EMDGS monocular dynamic reconstruction demo"></video>
+          </span>
+          <div class="work-body">
+            <p class="work-venue"><span class="venue-chip">IEEE TCSVT · Submitted</span></p>
+            <h3 class="work-title">EMDGS: Enhancing Monocular Dynamic Gaussian Splatting via Adaptive Pipeline Integration</h3>
+            <p class="work-desc">Monocular dynamic reconstruction that needs no SfM poses or point clouds. Static and dynamic regions are separated explicitly, and the whole pipeline drops into existing 4DGS methods.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ PUBLICATIONS ══════════════════════ -->
+  <section class="band band-alt" id="publications">
+    <div class="shell">
+      <div class="section-head">
+        <h2 class="section-title">Publications</h2>
+        <p class="section-note"><span class="mark">*</span> equal contribution &nbsp;·&nbsp; <span class="mark">†</span> co-corresponding author</p>
+      </div>
+
+      <!-- ─────────── Conference ─────────── -->
+      <div class="pub-group">
+        <h3 class="pub-group-title">Conference<span class="count">2</span></h3>
+
+        <article class="pub">
+          <p class="pub-idx">C2</p>
+          <a class="pub-thumb" href="https://arxiv.org/abs/2604.00538">
+            <video src="assets/papers/trigs-demo.mp4" autoplay muted loop playsinline
+                   preload="metadata" aria-label="TRiGS 4D reconstruction demo"></video>
+          </a>
+          <div class="pub-body">
+            <p class="pub-venue">European Conference on Computer Vision (ECCV 2026)</p>
+            <h4 class="pub-title">TRiGS: Temporal Rigid-Body Motion for Scalable 4D Gaussian Splatting</h4>
+            <p class="pub-authors"><span>*</span><span class="me">Suwoong Yeom</span><span>, *Joonsik Nam, *Seunggyu Choi, Lucas Yunkyu Lee, Sangmin Kim, Jaesik Park, Joonsoo Kim, Kug-jin Yun, Kyeongbo Kong†, Suk-Ju Kang†</span></p>
+            <div class="pub-links">
+              <a class="pill pill-arxiv" href="https://arxiv.org/abs/2604.00538">arXiv</a>
+              <a class="pill" href="https://wwwjjn.github.io/TRiGS-project_page/">Project Page</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="pub">
+          <p class="pub-idx">C1</p>
+          <a class="pub-thumb" href="https://ieeexplore.ieee.org/document/10457115/authors#authors" target="_blank" rel="noopener">
+            <img src="assets/papers/iceic.gif" alt="Motion mask pipeline figure" loading="lazy" />
+          </a>
+          <div class="pub-body">
+            <p class="pub-venue">International Conference on Electronics, Information and Communications (ICEIC 2024)</p>
+            <h4 class="pub-title">Motion Mask-driven Improvements in Monocular Dynamic Novel View Synthesis</h4>
+            <p class="pub-authors"><span class="me">Suwoong Yeom</span><span>, Hosung Son, Chanhee Kang, Joonsoo Kim, Kug-jin Yun, Won-Sik Cheong, Suk-Ju Kang</span></p>
+            <div class="pub-links">
+              <a class="pill" href="https://ieeexplore.ieee.org/document/10457115/authors#authors" target="_blank" rel="noopener">IEEE Xplore</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- ─────────── Journal ─────────── -->
+      <div class="pub-group">
+        <h3 class="pub-group-title">Journal<span class="count">3</span></h3>
+
+        <article class="pub">
+          <p class="pub-idx">J3</p>
+          <a class="pub-thumb" href="https://ieeexplore.ieee.org/document/11319162/authors" target="_blank" rel="noopener">
+            <img src="assets/papers/icsd-nerf.jpg" alt="ICSD-NeRF pipeline figure" loading="lazy" />
+          </a>
+          <div class="pub-body">
+            <p class="pub-venue">IEEE Transactions on Computational Imaging (TCI)</p>
+            <h4 class="pub-title">ICSD-NeRF: Independent Canonical Spaces for Enhanced Dynamic Scene Modeling in Neural Radiance Fields</h4>
+            <p class="pub-authors"><span class="me">Suwoong Yeom</span><span>, Hosung Son, Chanhee Kang, Eunho Shin, Joonsoo Kim, Kug-jin Yun, Suk-Ju Kang</span></p>
+            <div class="pub-links">
+              <a class="pill" href="https://ieeexplore.ieee.org/document/11319162/authors" target="_blank" rel="noopener">IEEE Xplore</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 링크가 생기면 아래 span 을 <a class="pub-thumb" href="…"> 로 바꾸고
+             pub-links 블록을 추가하세요 -->
+        <article class="pub">
+          <p class="pub-idx">J2</p>
+          <span class="pub-thumb">
+            <video src="assets/papers/emdgs-demo.mp4" autoplay muted loop playsinline
+                   preload="metadata" aria-label="EMDGS monocular dynamic reconstruction demo"></video>
+          </span>
+          <div class="pub-body">
+            <p class="pub-venue">IEEE Transactions on Circuits and Systems for Video Technology (TCSVT) <span class="venue-sub">Under Review</span></p>
+            <h4 class="pub-title">EMDGS: Enhancing Monocular Dynamic Gaussian Splatting via Adaptive Pipeline Integration</h4>
+            <p class="pub-authors"><span>*</span><span class="me">Suwoong Yeom</span><span>, *Jimin Roh, *Eunho Shin, Songju Na, Joonsoo Kim, Kug-jin Yun, Kyeongbo Kong†, Suk-Ju Kang†</span></p>
+          </div>
+        </article>
+
+        <article class="pub">
+          <p class="pub-idx">J1</p>
+          <a class="pub-thumb" href="https://arxiv.org/pdf/2604.04016">
+            <video src="assets/papers/hoigs-demo.mp4" autoplay muted loop playsinline
+                   preload="metadata" aria-label="HOIGS reconstruction comparison demo"></video>
+          </a>
+          <div class="pub-body">
+            <p class="pub-venue">IEEE Transactions on Multimedia (TMM) <span class="venue-sub">Under Review</span></p>
+            <h4 class="pub-title">HOIGS: Human-Object Interaction Gaussian Splatting</h4>
+            <p class="pub-authors"><span>*Taewoo Kim, *</span><span class="me">Suwoong Yeom</span><span>, *Jaehyun Pyun, Geonho Cha, Dongyoon Wee, Joonsik Nam, Yun-Seong Jeong, Kyeongbo Kong†, Suk-Ju Kang†</span></p>
+            <div class="pub-links">
+              <a class="pill pill-arxiv" href="https://arxiv.org/pdf/2604.04016">arXiv</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════ MENTORING ══════════════════════ -->
+  <section class="band" id="mentoring">
+    <div class="shell">
+      <div class="section-head">
+        <h2 class="section-title">Mentoring</h2>
+        <p class="section-note">Junior researchers I worked closely with, and the papers that came out of it</p>
+      </div>
+
+      <div class="mentor-list">
+
+        <!-- 항목을 추가하려면 아래 <article class="mentor"> 블록을 통째로 복사하세요.
+             링크가 있으면 span.pub-thumb 을 <a class="pub-thumb" href="…"> 로 바꾸고
+             본문 끝에 pub-links 블록을 넣으면 됩니다. -->
+        <article class="mentor">
+          <p class="mentor-year">2026</p>
+          <a class="pub-thumb" href="https://icml2026-f2s-workshop.github.io/F2S_papers/poster/13_Dual_PAG_Bidirectional_Pert.pdf" target="_blank" rel="noopener">
+            <img src="assets/papers/dual-pag.jpg" alt="Dual-PAG pipeline figure" loading="lazy" />
+          </a>
+          <div class="mentor-body">
+            <p class="mentee-tag"><span class="label">Mentee</span><span class="name">Jeongseon Oh</span><span class="role">Integrated M.S./Ph.D. Student</span></p>
+            <p class="pub-venue">International Conference on Machine Learning (ICML 2026) <span class="venue-sub">F2S Workshop</span></p>
+            <h3 class="mentor-title">Dual-PAG: Bidirectional Perturbed-Attention Guidance for Residue-Free Video Editing</h3>
+            <!-- 이 섹션에서는 본인이 아니라 멘티를 강조합니다 -->
+            <p class="pub-authors"><span>*</span><span class="mentee">Jeongseon Oh</span><span>, *Suwoong Yeom, *ChangHee Yang, Suk-Ju Kang†</span></p>
+            <div class="pub-links">
+              <a class="pill" href="https://icml2026-f2s-workshop.github.io/F2S_papers/poster/13_Dual_PAG_Bidirectional_Pert.pdf" target="_blank" rel="noopener">PDF</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ PROJECTS ══════════════════════ -->
+  <section class="band band-alt" id="projects">
+    <div class="shell">
+      <div class="section-head">
+        <h2 class="section-title">Research Projects</h2>
+        <p class="section-note">Funded and industry collaborations</p>
+      </div>
+
+      <div class="timeline timeline-logos timeline-logos-wide">
+        <article class="tl-item">
+          <p class="tl-date">June 2025 —</p>
+          <span class="tl-logo"><img src="assets/logos/naver-cloud.png" alt="NAVER Cloud" loading="lazy" /></span>
+          <div class="tl-body">
+            <h3 class="tl-title">NAVER CLOUD 공동 연구</h3>
+            <p class="tl-org">NAVER Cloud, Korea · 참여연구원</p>
+            <div class="tags">
+              <span>Feed-Forward 3D/4D Reconstruction</span>
+              <span>World Modeling</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tl-item">
+          <p class="tl-date">Mar 2023 —</p>
+          <span class="tl-logo"><img src="assets/logos/etri.png" alt="ETRI" loading="lazy" /></span>
+          <div class="tl-body">
+            <h3 class="tl-title">초실감 메타버스 서비스를 위한 실사기반 입체영상 공간컴퓨팅 기술 개발</h3>
+            <p class="tl-org">ETRI, Korea · 참여연구원</p>
+            <div class="tags">
+              <span>3D/4D Reconstruction</span>
+              <span>Depth Estimation</span>
+              <span>Neural Rendering</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <p>© 2026 Suwoong Yeom</p>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
