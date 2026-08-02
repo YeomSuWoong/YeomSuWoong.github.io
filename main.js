@@ -16,15 +16,8 @@
     });
   }
 
-  // Follow the OS theme until the visitor picks one explicitly.
-  var mq = window.matchMedia('(prefers-color-scheme: dark)');
-  var onSchemeChange = function (e) {
-    var stored = null;
-    try { stored = localStorage.getItem('theme'); } catch (err) {}
-    if (!stored) root.setAttribute('data-theme', e.matches ? 'dark' : 'light');
-  };
-  if (mq.addEventListener) mq.addEventListener('change', onSchemeChange);
-  else if (mq.addListener) mq.addListener(onSchemeChange);
+  // Dark is the default for everyone; the OS setting is deliberately not
+  // consulted, so nothing here overrides it after load.
 
   /* ------------------------------------------------------ nav + scroll-spy */
   var nav = document.getElementById('nav');
