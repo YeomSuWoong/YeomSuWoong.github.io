@@ -260,6 +260,18 @@ button { font: inherit; color: inherit; }
   color: var(--ink-soft);
 }
 .hero-lede p + p { margin-top: 1rem; }
+
+/* inline links in the bio — same emphasis as a highlighted author name */
+.hero-lede a {
+  font-weight: 600;
+  color: var(--ink);
+  box-shadow: inset 0 -2px 0 var(--accent-line);
+  transition: color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+.hero-lede a:hover {
+  color: var(--accent);
+  box-shadow: inset 0 -2px 0 var(--accent);
+}
 .hero-lede em {
   font-family: var(--font-display);
   font-style: italic;
