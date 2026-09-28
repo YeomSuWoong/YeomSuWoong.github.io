@@ -1,0 +1,302 @@
+% ============================================================
+%  Suwoong Yeom — Curriculum Vitae
+%  pdfLaTeX / XeLaTeX / LuaLaTeX 어느 엔진으로도 컴파일됩니다 (Overleaf 기본값 OK).
+%
+%  자주 쓰는 명령
+%    \me          본인 이름 (굵게)
+%    \eq          equal contribution 표시 (*)
+%    \corr        교신저자 표시 (†)
+%    \verify{…}   확인이 필요한 문장 (빨간 글씨) — 내용 확인 후 \verify{ } 를 벗겨내세요
+%    \entry{제목}{장소}{소속}{기간}
+%    \pub{번호}{저자}{제목}{학회/저널}{비고 — 없으면 {} 로 비움}
+% ============================================================
+\documentclass[10pt]{article}
+
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\else
+  \usepackage{fontspec}
+\fi
+
+\usepackage[a4paper, top=1.8cm, bottom=2.2cm, left=1.9cm, right=1.9cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Suwoong Yeom - Curriculum Vitae}, pdfauthor={Suwoong Yeom}}
+
+% ---------- 페이지 ----------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\small Last modified: \today}
+\fancyfoot[C]{\small \thepage\ of \pageref{LastPage}}
+
+\setlength{\parindent}{0pt}
+\raggedbottom
+
+% ---------- 섹션 제목: 작은 대문자 + 밑줄 ----------
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\vspace{-0.3ex}\titlerule]
+\titlespacing*{\section}{0pt}{1.6ex}{1.0ex}
+\titleformat{\subsection}{\normalsize\raggedright}{}{0em}{}
+\titlespacing*{\subsection}{0pt}{0.8ex}{0.2ex}
+
+% ---------- 목록 ----------
+\newlist{entries}{itemize}{1}
+\setlist[entries]{label={}, leftmargin=1em, itemsep=1.0ex, topsep=0.2ex, parsep=0pt}
+\newlist{details}{itemize}{1}
+\setlist[details]{label=\textbullet, leftmargin=1.6em, itemsep=0.1ex, topsep=0.2ex, parsep=0pt}
+\newlist{pubs}{itemize}{1}
+\setlist[pubs]{leftmargin=3.4em, labelwidth=2.8em, labelsep=0.6em, align=right,
+               itemsep=1.0ex, topsep=0.4ex, parsep=0pt,
+               before={\interlinepenalty=10000 \clubpenalty=10000 \widowpenalty=10000}}  % 논문 한 편이 두 쪽에 걸쳐 잘리지 않게
+
+% ---------- 명령 ----------
+\newcommand{\me}{\textbf{Suwoong Yeom}}
+\newcommand{\eq}{\textsuperscript{*}}
+\newcommand{\corr}{\textsuperscript{\dag}}
+\newcommand{\verify}[1]{\textcolor{red}{#1}}
+% 전부 확인했으면 위 줄 대신 아래 줄을 쓰면 빨간 글씨가 한 번에 검정으로 바뀝니다.
+% \newcommand{\verify}[1]{#1}
+
+% \entry{제목}{장소}{소속}{기간}
+\newcommand{\entry}[4]{%
+  \item \textbf{#1}\hfill #2\\*
+  \textit{#3}\hfill\textit{#4}}
+
+% \project{과제명}{기관 · 역할}{기간}
+\newcommand{\project}[3]{%
+  \item \textit{#2}\hfill\textit{#3}\\*
+  {\hyphenpenalty=10000 \exhyphenpenalty=10000 \raggedright\textbf{#1}\par}}  % 과제명은 단어 중간에서 끊지 않음
+
+% \pub{번호}{저자}{제목}{학회/저널}{비고}
+\newcommand{\pub}[5]{%
+  \item[{[#1]}] #2\\*
+  \textit{#3}\\*
+  #4%
+  \if\relax\detokenize{#5}\relax\else\\* #5\fi}
+
+\begin{document}
+
+% ============================================================
+%  이름 / 연락처
+% ============================================================
+\begin{center}
+  {\fontsize{26}{30}\selectfont\bfseries Suwoong Yeom}\\[5pt]
+  {\small
+    \href{tel:+821088599561}{+82-10-8859-9561} \textbar{}
+    \href{mailto:suwoong96@sogang.ac.kr}{suwoong96@sogang.ac.kr} \textbar{}
+    \href{https://yeomsuwoong.github.io}{yeomsuwoong.github.io} \textbar{}
+    \href{https://scholar.google.com/citations?hl=en&user=7wG0GVcAAAAJ}{Google Scholar}%
+    % 필요하면 아래 줄 주석을 풀어 추가하세요.
+    % \textbar{} \href{https://github.com/YeomSuWoong}{GitHub}%
+    % \textbar{} \href{https://www.linkedin.com/in/suwoong-yeom-825599251/}{LinkedIn}%
+    \\[1pt]
+    VDSLab, Department of Electronic Engineering, Sogang University, Seoul, Republic of Korea}
+\end{center}
+
+% ============================================================
+\section{Research Interests}
+% ============================================================
+\begin{entries}
+  \item 3D/4D reconstruction and neural rendering with NeRF and Gaussian Splatting;
+  spatial understanding in feed-forward models; world models for digital twins and physical AI.
+\end{entries}
+
+% ============================================================
+\section{Education}
+% ============================================================
+\begin{entries}
+  \entry{Integrated M.S./Ph.D. in Electronic Engineering}{Seoul, Republic of Korea}
+        {Sogang University (VDSLab)}{2023.03 -- Present}
+  \begin{details}
+    \item Overall GPA: 4.15/4.5
+    \item Advisor: Prof. Suk-Ju Kang
+  \end{details}
+
+  \entry{B.S. in Mechanical Engineering}{Suwon, Republic of Korea}
+        {Ajou University}{2016.03 -- 2022.08}
+  \begin{details}
+    \item Overall GPA: 3.42/4.5
+  \end{details}
+\end{entries}
+
+% ============================================================
+\section{Research Experience}
+% ============================================================
+\begin{entries}
+  \entry{Visiting Researcher}{West Lafayette, IN, USA}
+        {NEISLab, Purdue University}{2026.06 -- 2026.07}
+  \begin{details}
+    \item Advisor: Prof. Younghyun Kim
+  \end{details}
+\end{entries}
+
+% ============================================================
+\section{Publications}
+% ============================================================
+{\small \eq Equal contribution (co-first authors) \quad \corr Corresponding author}
+
+\subsection{International Conference}
+\begin{pubs}
+  \pub{C2}
+      {\me\eq, Joonsik Nam\eq, Seunggyu Choi\eq, Lucas Yunkyu Lee, Sangmin Kim, Jaesik Park,
+       Joonsoo Kim, Kug-jin Yun, Kyeongbo Kong\corr, and Suk-Ju Kang\corr}
+      {TRiGS: Temporal Rigid-Body Motion for Scalable 4D Gaussian Splatting}
+      {European Conf. on Computer Vision (\textbf{ECCV}), 2026}
+      {}
+
+  \pub{C1}
+      {\me, Hosung Son, Chanhee Kang, Joonsoo Kim, Kug-jin Yun, Won-Sik Cheong, and Suk-Ju Kang}
+      {Motion Mask-driven Improvements in Monocular Dynamic Novel View Synthesis}
+      {Int. Conf. on Electronics, Information, and Communications (\textbf{ICEIC}), 2024}
+      {(\textbf{Oral} presentation)}
+\end{pubs}
+
+\subsection{International Journal}
+\begin{pubs}
+  \pub{J1}
+      {\me, Hosung Son, Chanhee Kang, Eunho Shin, Joonsoo Kim, Kug-jin Yun, and Suk-Ju Kang}
+      {ICSD-NeRF: Independent Canonical Spaces for Enhanced Dynamic Scene Modeling in Neural Radiance Fields}
+      {IEEE Transactions on Computational Imaging (\textbf{TCI}), vol.~12, pp.~242--255, 2026}
+      {}
+\end{pubs}
+
+\subsection{Workshop}
+\begin{pubs}
+  \pub{W3}
+      {Seunggyu Choi\eq, \me\eq, and Suk-Ju Kang\corr}
+      {The Decoder Already Knows Where to Densify: Attention-Gated Capacity Allocation for Feed-Forward 3D Gaussian Splatting}
+      {3DWM Workshop, European Conf. on Computer Vision (\textbf{ECCV}), 2026}
+      {}
+
+  \pub{W2}
+      {Chaewon Lee\eq, Seunggyu Choi\eq, \me\eq, Joonsoo Kim, Kugjin Yun, and Suk-Ju Kang\corr}
+      {Seamless Spatial Extension in 3D Gaussian Splatting via Auxiliary Wild Views}
+      {TwinWorld Workshop, European Conf. on Computer Vision (\textbf{ECCV}), 2026}
+      {}
+
+  \pub{W1}
+      {Jeongseon Oh\eq, \me\eq, ChangHee Yang\eq, and Suk-Ju Kang\corr}
+      {Dual-PAG: Bidirectional Perturbed-Attention Guidance for Residue-Free Video Editing}
+      {F2S Workshop, Int. Conf. on Machine Learning (\textbf{ICML}), 2026}
+      {}
+\end{pubs}
+
+\subsection{Under Review}
+\begin{pubs}
+  \pub{U4}
+      {\me, Geonho Cha, Dongyoon Wee,
+       Kyeongbo Kong\corr, and Suk-Ju Kang\corr}
+      {Learning to Remember and Evolve: Object State Memory for Video World Models}
+      {International Conference on Learning Representation (\textbf{ICLR})}
+      {}
+  \pub{U3}
+      {Seunggyu Choi\eq, \me\eq, Joonsik Nam, Geonho Cha, Dongyoon Wee,
+       and Suk-Ju Kang\corr}
+      {Learning to Optimize: Prior-Preserving Point-to-Gaussian Lifting for Feed-Forward Novel View Synthesis}
+      {The Association for the Advancement of Artificial Intelligence (\textbf{AAAI})}
+      {}
+  \pub{U2}
+      {\me\eq, Jimin Roh\eq, Eunho Shin\eq, Songju Na, Joonsoo Kim, Kug-jin Yun,
+       Kyeongbo Kong\corr, and Suk-Ju Kang\corr}
+      {EMDGS: Enhancing Monocular Dynamic Gaussian Splatting via Adaptive Pipeline Integration}
+      {IEEE Transactions on Circuits and Systems for Video Technology (\textbf{TCSVT})}
+      {}
+
+  \pub{U1}
+      {Taewoo Kim\eq, \me\eq, Jaehyun Pyun\eq, Geonho Cha, Dongyoon Wee, Joonsik Nam,
+       Yun-Seong Jeong, Kyeongbo Kong\corr, and Suk-Ju Kang\corr}
+      {HOIGS: Human-Object Interaction Gaussian Splatting}
+      {IEEE Transactions on Multimedia (\textbf{TMM})}
+      {}
+\end{pubs}
+
+% ============================================================
+\section{Research Projects}
+% ============================================================
+%  \project{과제명}{기관}{기간} — 각 항목 위 주석이 한글 원제입니다.
+%  수행 내용을 적고 싶으면 과제 아래에 \begin{details} \item … \end{details} 를 추가하세요.
+%  빨간 글씨(관련 논문)는 초안이니 확인 후 고쳐 주세요.
+\begin{entries}
+  % 보조 영상 기반 동적 장면 공간 확장 방안 연구
+  \project{Spatial Extension of Dynamic Scenes Using Auxiliary Views}
+          {Electronics and Telecommunications Research Institute (ETRI)}{2026.01 -- Present}
+
+  % 시공간 객체 상태 일관성 유지 가능 비디오 월드 모델 개발
+  \project{Video World Models with Spatiotemporally Consistent Object States}
+          {NAVER Cloud}{2026.01 -- Present}
+  \begin{details}
+    \item Related publications: [U4], [U3]
+  \end{details}
+
+  % 인간 객체 상호작용 가우시안 스플래팅 기술 개발
+  \project{Human-Object Interaction Gaussian Splatting}
+          {NAVER Cloud}{2025.06 -- 2025.12}
+  \begin{details}
+    \item Related publication: [U1]
+  \end{details}
+
+  % 보조 영상 기반 정적 장면 공간 확장 및 동적 장면 표현 고도화 연구
+  \project{Spatial Extension of Static Scenes Using Auxiliary Views and Enhanced Dynamic Scene Representation}
+          {Electronics and Telecommunications Research Institute (ETRI)}{2025.01 -- 2025.12}
+  \begin{details}
+    \item Related publications: [C2], [W2]
+  \end{details}
+
+  % 생성모델 기반 3차원 공간 표현 인페인팅 알고리즘 연구
+  \project{Generative Model-Based Inpainting for 3D Scene Representations}
+          {Electronics and Telecommunications Research Institute (ETRI)}{2024.01 -- 2024.12}
+
+  % 실사 영상 3차원 공간정보 획득 방안 연구
+  \project{Acquiring 3D Spatial Information from Real-World Videos}
+          {Electronics and Telecommunications Research Institute (ETRI)}{2023.01 -- 2023.12}
+  \begin{details}
+    \item Related publications: [C1], [J1]
+  \end{details}
+\end{entries}
+
+% ============================================================
+\section{Mentoring}
+% ============================================================
+\begin{details}[leftmargin=2.6em]
+  \item \textbf{Seunggyu Choi}, M.S. Student --- co-first-authored [W3], ECCV 2026 3DWM Workshop
+  \item \textbf{Chaewon Lee}, Undergraduate Researcher --- co-first-authored [W2], ECCV 2026 TwinWorld Workshop
+  \item \textbf{Jeongseon Oh}, Integrated M.S./Ph.D. Student --- co-first-authored [W1], ICML 2026 F2S Workshop
+\end{details}
+
+% ============================================================
+\section{Languages}
+% ============================================================
+\begin{details}[leftmargin=2.6em]
+  \item \textbf{Korean}: Native
+  \item \textbf{English}: OPIc IH (Intermediate High)
+\end{details}
+
+% ============================================================
+%  아래 섹션은 실제로 해당하는 것만 주석(%)을 풀고 채우세요.
+%  해당 사항이 없는 섹션은 그대로 두면 PDF에 나오지 않습니다.
+% ============================================================
+
+% \section{Technical Skills}
+% \begin{details}
+%   \item \textbf{Programming}: Python, PyTorch, CUDA, C++
+%   \item \textbf{3D/Graphics}: COLMAP, Nerfstudio, gsplat, Blender
+% \end{details}
+
+% \section{Honors and Awards}
+% \begin{details}
+%   \item \textbf{Award Name}, Organization, Mon.\ YYYY
+% \end{details}
+
+% \section{Academic Service}
+% \begin{details}
+%   \item Reviewer: CVPR, ICCV, ECCV, NeurIPS, ...
+% \end{details}
+
+\end{document}

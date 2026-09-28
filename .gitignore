@@ -10,6 +10,14 @@
 /*.gif
 /*.png
 
+# LaTeX 빌드 부산물 (cv/)
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
 # OS / 에디터
 Thumbs.db
 desktop.ini
